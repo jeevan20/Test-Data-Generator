@@ -3,7 +3,6 @@ const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
 const { Configuration, OpenAIApi } = require("openai");
-const { randEmail, randFullName, randPost } = require("@ngneat/falso");
 
 const app = express();
 app.use(cors());
