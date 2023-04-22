@@ -2,5 +2,5 @@
 
 ### env file content
 
-PORT =
-api_key = from openai
+* PORT =
+* api_key = from openai
