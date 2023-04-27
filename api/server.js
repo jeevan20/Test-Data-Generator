@@ -5,7 +5,14 @@ const axios = require("axios");
 const { Configuration, OpenAIApi } = require("openai");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://test-data-generator.onrender.com/",
+    ],
+  })
+);
 app.use(express.json());
 
 const configuration = new Configuration({
