@@ -1,7 +1,7 @@
 
 # Test-data Generator
 
-This web project is a Test-data Generator that provides a user-friendly interface for generating test data. It utilizes HTML, CSS, JavaScript, and React for the frontend, and Node and Express for the backend. The project aims to help users generate data in different formats such as JSON, HTML, CSV, SQL, and NOSQL.
+This web project is a Test-data Generator that provides a user-friendly interface for generating test data. It use HTML, CSS, JavaScript, and React for the frontend, and Node and Express for the backend. The project aims to help users generate data in different formats such as JSON, HTML, CSV, SQL, and NOSQL.
 
 ### Features
 * User-friendly interface for generating test data
