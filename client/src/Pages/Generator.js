@@ -38,8 +38,8 @@ function Generator() {
     await axios
       .post(base_url + "/chatgpt", { prompt, numRow })
       .then((res) => {
-        console.log(res.data);
-        console.log(typeof res.data);
+        // console.log(res.data);
+        // console.log(typeof res.data);
         setCSVObject(res.data);
         setIsLoading(false);
       })
