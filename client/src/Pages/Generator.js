@@ -197,7 +197,6 @@ function Generator() {
             <div className="row_input">
               <input
                 type="number"
-                value={numRow}
                 placeholder="No of Rows"
                 className="input-attribute-count"
                 onChange={(e) => {
