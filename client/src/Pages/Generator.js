@@ -197,7 +197,7 @@ function Generator() {
             <div className="row_input">
               <input
                 type="number"
-                placeholder="No of Rows"
+                placeholder="No of Rows(5-50)"
                 className="input-attribute-count"
                 onChange={(e) => {
                   setNoRow(e.target.value);
