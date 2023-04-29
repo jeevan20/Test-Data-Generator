@@ -30,7 +30,7 @@ function Card(props) {
   return (
     <div className="card">
       <div className="card_body">
-        <img src={props.img} alt="" srcset="" />
+        <img src={props.img} alt="" srcSet="" />
         <h2 className="card_title">{props.title}</h2>
         <p className="card_description">{props.desc}</p>
       </div>

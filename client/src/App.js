@@ -1,22 +1,16 @@
 import { React } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Generator from "./Pages/Generator";
 import Home from "./Pages/Home";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/generator",
-    element: <Generator />,
-  },
-]);
 const App = () => {
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+          <Route path="/generator" element={<Generator />} exact />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
