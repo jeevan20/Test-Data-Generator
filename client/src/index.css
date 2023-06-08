@@ -1,0 +1,224 @@
+body {
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+/* Container Panel */
+.Generator {
+  font-family: sans-serif;
+
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 1.8fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nav nav"
+    "generator preview";
+}
+/* Navbar */
+#nav-bar {
+  grid-area: nav;
+}
+/* Generator-Panel */
+.generator-panel {
+  /* color: #fff; */
+  background-color: #f5f5f5;
+  /* background-color: rgb(40, 44, 52); */
+  grid-area: generator;
+
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: 40px 1fr 55px 55px;
+  gap: 0px 0px;
+  border-top: 1px black solid;
+  border-right: 1px black solid;
+} /* input field for attributes */
+.generator-panel .add-attribute {
+  grid-area: 1 / 1 / 2 / 2;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  height: 39px;
+}
+.generator-panel .input-option {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.generator-panel .attributes-submit {
+  grid-area: 3 / 1 / 4 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 1rem;
+}
+.generator-panel .export-panel {
+  grid-area: 4 / 1 / 5 / 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1rem;
+}
+.generator-panel .attribute-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.generator-panel .attribute-input input {
+  border: 1px solid #707070;
+  margin-left: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.select-attribute {
+  border: 1px solid #707070;
+  padding: 5px;
+  border-radius: 10px;
+  color: rgb(100, 100, 100);
+  padding-left: 5px;
+}
+.add-attribute .attribute-text {
+  margin: 10px 43px;
+}
+.generator-panel .attribute-input .delete-field {
+  border: 1px solid rgb(244, 92, 92);
+  outline: none;
+  padding: 10px;
+  margin: 10px;
+
+  background-color: rgb(244, 92, 92);
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  width: fit-content;
+  border-radius: 50%;
+}
+.generator-panel .attribute-input .delete-field:hover {
+  outline: none;
+  background-color: white;
+  color: red;
+  transition: all 0.2s;
+  cursor: pointer;
+} /* add button and count  Row */
+.add-field-div {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-field-btn {
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  margin: 10px;
+  background-color: #4942e4;
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #4942e4;
+}
+.add-field-btn:hover {
+  outline: none;
+  background-color: white;
+  color: #4942e4;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.attributes-submit .attributes-submit-btn {
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin: 10px;
+  margin-left: 20px;
+  background-color: #4942e4;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  width: fit-content;
+  border: 1px solid #4942e4;
+}
+.attributes-submit .attributes-submit-btn:hover {
+  outline: none;
+  background-color: white;
+  color: #4942e4;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.attributes-submit input {
+  padding: 3px;
+  padding-left: 6px;
+  margin-left: 15px;
+  width: 145px;
+}
+.input-attribute-count {
+  border: 1px solid #707070;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding-left: 10px;
+} /* export panel */
+
+.export-panel .export-option {
+  margin: 15px;
+  padding: 3px;
+}
+.export-panel .export-btn {
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #4942e4;
+
+  background-color: #4942e4;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  width: fit-content;
+}
+.export-panel .export-btn:hover {
+  outline: none;
+  background-color: white;
+  color: #4942e4;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.export-panel select {
+  color: rgb(100, 100, 100);
+  font-size: 0.9rem;
+  padding: 10px;
+  border-radius: 10px;
+  padding-right: 15px;
+  outline: none;
+  height: 30px;
+}
+
+/* Preview-Panel */
+.textEdit {
+  grid-area: preview;
+}
+
+@media (max-width: 768px) {
+  .Generator {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "nav"
+      "generator"
+      "preview";
+  }
+  .generator-panel {
+    border-right: none;
+  }
+}
