@@ -5,14 +5,7 @@ const axios = require("axios");
 const { Configuration, OpenAIApi } = require("openai");
 
 const app = express();
-app.use(
-  cors({
-    origin: [
-      "http://localhost:3000",
-      "https://test-data-generator.onrender.com/",
-    ],
-  })
-);
+app.use(cors());
 app.use(express.json());
 
 const configuration = new Configuration({
@@ -45,8 +38,13 @@ app.get("/chatgpt", async (req, res) => {
 });
 
 app.post("/chatgpt", async (req, res) => {
-  const { prompt, numRow } = req.body;
-  const new_prompt = `generate ${numRow} dataset in JSON format for following the attributes Without Duplicates and Repeatation: ${prompt} `;
+  var { prompt, numRow } = req.body;
+  // if (numRow < 5) {
+  //   numRow = 6;
+  // }
+  // const new_prompt = `generate ${numRow} dataset in JSON format for following the attributes Without Duplicates and Repeatation: ${prompt} `;
+  const new_prompt = `generate one dataset with ${numRow} only in JSON format for following the attributes Without Duplicates and Repeatation: ${prompt} `;
+
   const answer = await openai.createCompletion({
     model: "text-davinci-003",
     prompt: new_prompt,
